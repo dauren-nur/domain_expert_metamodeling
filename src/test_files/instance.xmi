@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sampleDomain:Company
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:sampleDomain="http://www.example.org/sampleDomain"
+    xsi:schemaLocation="http://www.example.org/sampleDomain sampleDomain.ecore"
+    name="Acme Corporation">
+
+  <!-- Employees of the company -->
+  <employees name="John Smith" age="42" email="john.smith@acme.com">
+    <address street="123 Main Street" city="Springfield" zipCode="12345" country="USA"/>
+    <roles type="EMPLOYEE" description="Software Developer"/>
+    <roles type="MANAGER" description="Project Manager"/>
+  </employees>
+
+  <employees name="Jane Doe" age="35" email="jane.doe@acme.com">
+    <address street="456 Oak Avenue" city="Springfield" zipCode="12345" country="USA"/>
+    <roles type="EMPLOYEE" description="UX Designer"/>
+  </employees>
+
+  <employees name="Bob Johnson" age="28" email="bob.johnson@acme.com">
+    <address street="789 Pine Road" city="Rivertown" zipCode="67890" country="USA"/>
+    <roles type="EMPLOYEE" description="System Administrator"/>
+  </employees>
+
+  <employees name="Alice Williams" age="45" email="alice.williams@acme.com">
+    <address street="321 Cedar Lane" city="Mountainview" zipCode="54321" country="USA"/>
+    <roles type="MANAGER" description="Department Head"/>
+  </employees>
+
+  <!-- Departments within the company -->
+  <departments name="Engineering" code="ENG">
+    <members xsi:type="sampleDomain:Person" href="#//@employees.0"/>
+    <members xsi:type="sampleDomain:Person" href="#//@employees.2"/>
+    <manager xsi:type="sampleDomain:Person" href="#//@employees.0"/>
+  </departments>
+
+  <departments name="Design" code="DES">
+    <members xsi:type="sampleDomain:Person" href="#//@employees.1"/>
+    <manager xsi:type="sampleDomain:Person" href="#//@employees.3"/>
+  </departments>
+
+  <departments name="Administration" code="ADM">
+    <members xsi:type="sampleDomain:Person" href="#//@employees.3"/>
+    <manager xsi:type="sampleDomain:Person" href="#//@employees.3"/>
+  </departments>
+
+</sampleDomain:Company>

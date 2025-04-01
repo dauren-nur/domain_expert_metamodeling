@@ -1,0 +1,336 @@
+{
+  "eClass": "http://www.eclipse.org/emf/2002/Ecore#//EPackage",
+  "name": "sampleDomain",
+  "nsURI": "http://www.example.org/sampleDomain",
+  "nsPrefix": "sampleDomain",
+  "eClassifiers": [
+    {
+      "eClass": "http://www.eclipse.org/emf/2002/Ecore#//EClass",
+      "name": "Individual",
+      "abstract": false,
+      "interface": false,
+      "eStructuralFeatures": [
+        {
+          "eClass": "http://www.eclipse.org/emf/2002/Ecore#//EAttribute",
+          "name": "name",
+          "eType": {
+            "$ref": "http://www.eclipse.org/emf/2002/Ecore#//EString",
+            "eClass": "http://www.eclipse.org/emf/2002/Ecore#//EDataType"
+          },
+          "ordered": true,
+          "unique": true,
+          "lowerBound": 0,
+          "upperBound": 1
+        },
+        {
+          "eClass": "http://www.eclipse.org/emf/2002/Ecore#//EAttribute",
+          "name": "age",
+          "eType": {
+            "$ref": "http://www.eclipse.org/emf/2002/Ecore#//EInt",
+            "eClass": "http://www.eclipse.org/emf/2002/Ecore#//EDataType"
+          },
+          "ordered": true,
+          "unique": true,
+          "lowerBound": 0,
+          "upperBound": 1
+        },
+        {
+          "eClass": "http://www.eclipse.org/emf/2002/Ecore#//EAttribute",
+          "name": "email",
+          "eType": {
+            "$ref": "http://www.eclipse.org/emf/2002/Ecore#//EString",
+            "eClass": "http://www.eclipse.org/emf/2002/Ecore#//EDataType"
+          },
+          "ordered": true,
+          "unique": true,
+          "lowerBound": 0,
+          "upperBound": 1
+        },
+        {
+          "eClass": "http://www.eclipse.org/emf/2002/Ecore#//EReference",
+          "name": "address",
+          "eType": {
+            "$ref": "//Address",
+            "eClass": "http://www.eclipse.org/emf/2002/Ecore#//EClass"
+          },
+          "ordered": true,
+          "unique": true,
+          "lowerBound": 0,
+          "upperBound": 1,
+          "containment": true
+        },
+        {
+          "eClass": "http://www.eclipse.org/emf/2002/Ecore#//EReference",
+          "name": "roles",
+          "eType": {
+            "$ref": "//Role",
+            "eClass": "http://www.eclipse.org/emf/2002/Ecore#//EClass"
+          },
+          "ordered": true,
+          "unique": true,
+          "lowerBound": 0,
+          "upperBound": "-1"
+        }
+      ]
+    },
+    {
+      "eClass": "http://www.eclipse.org/emf/2002/Ecore#//EClass",
+      "name": "Address",
+      "abstract": false,
+      "interface": false,
+      "eStructuralFeatures": [
+        {
+          "eClass": "http://www.eclipse.org/emf/2002/Ecore#//EAttribute",
+          "name": "street",
+          "eType": {
+            "$ref": "http://www.eclipse.org/emf/2002/Ecore#//EString",
+            "eClass": "http://www.eclipse.org/emf/2002/Ecore#//EDataType"
+          },
+          "ordered": true,
+          "unique": true,
+          "lowerBound": 0,
+          "upperBound": 1
+        },
+        {
+          "eClass": "http://www.eclipse.org/emf/2002/Ecore#//EAttribute",
+          "name": "city",
+          "eType": {
+            "$ref": "http://www.eclipse.org/emf/2002/Ecore#//EString",
+            "eClass": "http://www.eclipse.org/emf/2002/Ecore#//EDataType"
+          },
+          "ordered": true,
+          "unique": true,
+          "lowerBound": 0,
+          "upperBound": 1
+        },
+        {
+          "eClass": "http://www.eclipse.org/emf/2002/Ecore#//EAttribute",
+          "name": "zipCode",
+          "eType": {
+            "$ref": "http://www.eclipse.org/emf/2002/Ecore#//EString",
+            "eClass": "http://www.eclipse.org/emf/2002/Ecore#//EDataType"
+          },
+          "ordered": true,
+          "unique": true,
+          "lowerBound": 0,
+          "upperBound": 1
+        },
+        {
+          "eClass": "http://www.eclipse.org/emf/2002/Ecore#//EAttribute",
+          "name": "country",
+          "eType": {
+            "$ref": "http://www.eclipse.org/emf/2002/Ecore#//EString",
+            "eClass": "http://www.eclipse.org/emf/2002/Ecore#//EDataType"
+          },
+          "ordered": true,
+          "unique": true,
+          "lowerBound": 0,
+          "upperBound": 1
+        }
+      ]
+    },
+    {
+      "eClass": "http://www.eclipse.org/emf/2002/Ecore#//EEnum",
+      "name": "RoleType",
+      "eLiterals": [
+        {
+          "eClass": "http://www.eclipse.org/emf/2002/Ecore#//EEnumLiteral",
+          "name": "EMPLOYEE"
+        },
+        {
+          "eClass": "http://www.eclipse.org/emf/2002/Ecore#//EEnumLiteral",
+          "name": "MANAGER",
+          "value": "1"
+        },
+        {
+          "eClass": "http://www.eclipse.org/emf/2002/Ecore#//EEnumLiteral",
+          "name": "CUSTOMER",
+          "value": "2"
+        },
+        {
+          "eClass": "http://www.eclipse.org/emf/2002/Ecore#//EEnumLiteral",
+          "name": "VISITOR",
+          "value": "3"
+        }
+      ]
+    },
+    {
+      "eClass": "http://www.eclipse.org/emf/2002/Ecore#//EClass",
+      "name": "Role",
+      "abstract": false,
+      "interface": false,
+      "eStructuralFeatures": [
+        {
+          "eClass": "http://www.eclipse.org/emf/2002/Ecore#//EAttribute",
+          "name": "type",
+          "eType": {
+            "$ref": "//RoleType",
+            "eClass": "http://www.eclipse.org/emf/2002/Ecore#//EEnum"
+          },
+          "ordered": true,
+          "unique": true,
+          "lowerBound": 0,
+          "upperBound": 1
+        },
+        {
+          "eClass": "http://www.eclipse.org/emf/2002/Ecore#//EAttribute",
+          "name": "description",
+          "eType": {
+            "$ref": "http://www.eclipse.org/emf/2002/Ecore#//EString",
+            "eClass": "http://www.eclipse.org/emf/2002/Ecore#//EDataType"
+          },
+          "ordered": true,
+          "unique": true,
+          "lowerBound": 0,
+          "upperBound": 1
+        }
+      ]
+    },
+    {
+      "eClass": "http://www.eclipse.org/emf/2002/Ecore#//EClass",
+      "name": "Company",
+      "abstract": false,
+      "interface": false,
+      "eStructuralFeatures": [
+        {
+          "eClass": "http://www.eclipse.org/emf/2002/Ecore#//EAttribute",
+          "name": "name",
+          "eType": {
+            "$ref": "http://www.eclipse.org/emf/2002/Ecore#//EString",
+            "eClass": "http://www.eclipse.org/emf/2002/Ecore#//EDataType"
+          },
+          "ordered": true,
+          "unique": true,
+          "lowerBound": 0,
+          "upperBound": 1
+        },
+        {
+          "eClass": "http://www.eclipse.org/emf/2002/Ecore#//EReference",
+          "name": "employees",
+          "eType": {
+            "$ref": "//Individual",
+            "eClass": "http://www.eclipse.org/emf/2002/Ecore#//EClass"
+          },
+          "ordered": true,
+          "unique": true,
+          "lowerBound": 0,
+          "upperBound": "-1",
+          "containment": true
+        },
+        {
+          "eClass": "http://www.eclipse.org/emf/2002/Ecore#//EReference",
+          "name": "departments",
+          "eType": {
+            "$ref": "//Department",
+            "eClass": "http://www.eclipse.org/emf/2002/Ecore#//EClass"
+          },
+          "ordered": true,
+          "unique": true,
+          "lowerBound": 0,
+          "upperBound": "-1",
+          "containment": true
+        }
+      ]
+    },
+    {
+      "eClass": "http://www.eclipse.org/emf/2002/Ecore#//EClass",
+      "name": "Department",
+      "abstract": false,
+      "interface": false,
+      "eStructuralFeatures": [
+        {
+          "eClass": "http://www.eclipse.org/emf/2002/Ecore#//EAttribute",
+          "name": "name",
+          "eType": {
+            "$ref": "http://www.eclipse.org/emf/2002/Ecore#//EString",
+            "eClass": "http://www.eclipse.org/emf/2002/Ecore#//EDataType"
+          },
+          "ordered": true,
+          "unique": true,
+          "lowerBound": 0,
+          "upperBound": 1
+        },
+        {
+          "eClass": "http://www.eclipse.org/emf/2002/Ecore#//EAttribute",
+          "name": "code",
+          "eType": {
+            "$ref": "http://www.eclipse.org/emf/2002/Ecore#//EString",
+            "eClass": "http://www.eclipse.org/emf/2002/Ecore#//EDataType"
+          },
+          "ordered": true,
+          "unique": true,
+          "lowerBound": 0,
+          "upperBound": 1
+        },
+        {
+          "eClass": "http://www.eclipse.org/emf/2002/Ecore#//EReference",
+          "name": "members",
+          "eType": {
+            "$ref": "//Individual",
+            "eClass": "http://www.eclipse.org/emf/2002/Ecore#//EClass"
+          },
+          "ordered": true,
+          "unique": true,
+          "lowerBound": 0,
+          "upperBound": "-1"
+        },
+        {
+          "eClass": "http://www.eclipse.org/emf/2002/Ecore#//EReference",
+          "name": "manager",
+          "eType": {
+            "$ref": "//Individual",
+            "eClass": "http://www.eclipse.org/emf/2002/Ecore#//EClass"
+          },
+          "ordered": true,
+          "unique": true,
+          "lowerBound": 0,
+          "upperBound": 1
+        }
+      ]
+    },
+    {
+      "eClass": "http://www.eclipse.org/emf/2002/Ecore#//EClass",
+      "name": "Customer",
+      "abstract": false,
+      "interface": false,
+      "eStructuralFeatures": [
+        {
+          "eClass": "http://www.eclipse.org/emf/2002/Ecore#//EAttribute",
+          "name": "firstName",
+          "eType": {
+            "$ref": "http://www.eclipse.org/emf/2002/Ecore#//EString",
+            "eClass": "http://www.eclipse.org/emf/2002/Ecore#//EDataType"
+          },
+          "ordered": true,
+          "unique": true,
+          "lowerBound": 0,
+          "upperBound": 1
+        },
+        {
+          "eClass": "http://www.eclipse.org/emf/2002/Ecore#//EAttribute",
+          "name": "lastName",
+          "eType": {
+            "$ref": "http://www.eclipse.org/emf/2002/Ecore#//EString",
+            "eClass": "http://www.eclipse.org/emf/2002/Ecore#//EDataType"
+          },
+          "ordered": true,
+          "unique": true,
+          "lowerBound": 0,
+          "upperBound": 1
+        },
+        {
+          "eClass": "http://www.eclipse.org/emf/2002/Ecore#//EAttribute",
+          "name": "customerId",
+          "eType": {
+            "$ref": "http://www.eclipse.org/emf/2002/Ecore#//EInt",
+            "eClass": "http://www.eclipse.org/emf/2002/Ecore#//EDataType"
+          },
+          "ordered": true,
+          "unique": true,
+          "lowerBound": 0,
+          "upperBound": 1
+        }
+      ]
+    }
+  ]
+}
